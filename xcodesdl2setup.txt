@@ -1,0 +1,29 @@
+FOR SILLICON MACS ONLY
+
+Search Paths
+============
+1. Go to Targets/build settings and search for 'Search Paths'
+2. Set 'Header Search Paths' to '/opt/homebrew/include'
+3. Add your sdl2 library paths to 'Library Search Paths' like this:
+/opt/homebrew/Cellar/sdl2_mixer/2.8.1/lib 
+/opt/homebrew/Cellar/sdl2_image/2.8.4/lib 
+/opt/homebrew/Cellar/sdl2/2.32.2/lib
+etc.
+Remeber to change the version number as seen in the path
+
+Link Binary with Libraries
+==========================
+1. Go to Targets/Build Phases/Link Binary with Libraries
+2. Add paths like this:
+/opt/homebrew/Cellar/sdl2/2.32.0/lib/libSDL2-2.0.0.dylib 
+IMPORTANT - Choose libSDL2-2.0.0.dylib instead of libSDL2.dylib
+
+Add asset path
+==============
+1. In the toolbar, select Product/Scheme/Edit Scheme/Options
+2. Select 'Working Directory' on
+3. Set the path to your asset folder. For example:
+/Users/shaunakghosh/Documents/chords/chords/assets
+OR:
+#include <unistd.h>
+Use chdir() at the int main
